@@ -13,8 +13,8 @@ The game keeps its original identity — a non-combat cyberpunk cat exploration 
 The game is a static browser project with no build step:
 
 - Vanilla JavaScript, ES modules
-- Three.js (r160) real-time WebGL rendering, vendored locally in `lib/`
-- Post-processing (bloom, tone mapping) vendored in `lib/jsm/`
+- Three.js (r160) real-time WebGL rendering, vendored locally in `vendor/`
+- Post-processing (bloom, tone mapping) vendored in `vendor/jsm/`
 - WebAudio for a procedural music bed, reactive ambience, and sound effects
 - localStorage persistence
 - No heavy frameworks, no bundler, no internet requirement at runtime
@@ -28,8 +28,8 @@ A local static server is required because browsers do not load ES modules over `
 index.html           Title screen, HUD, map/journal/shop/dialogue modal markup
 style.css            Neon UI: animated title, HUD panels, trackers, compass, map
 serve.py             Static dev server (caching disabled)
-lib/three.module.js  Vendored Three.js r160
-lib/jsm/             Vendored post-processing (EffectComposer, RenderPass,
+vendor/three.module.js  Vendored Three.js r160
+vendor/jsm/             Vendored post-processing (EffectComposer, RenderPass,
                      UnrealBloomPass, OutputPass, shaders)
 src/data.js          Constants, districts, lore, shop, kittens, missions,
                      side-quests, discoveries, achievements, shared state
@@ -46,7 +46,7 @@ src/ui.js            HUD, mission/side-quest trackers, compass, popups, floaters
 src/fx.js            GPU-friendly particle pool, ambient emitters, reward
                      floaters, screen flashes
 src/audio.js         WebAudio music bed, reverb bus, reactive ambience, SFX
-legacy-2d/           The original 2D Canvas version, unchanged
+archive/legacy-2d/   The original 2D Canvas version, unchanged
 README.md            Overview, controls, run instructions
 docs/user-manual.md   Player-facing manual
 docs/project-report.md   This document

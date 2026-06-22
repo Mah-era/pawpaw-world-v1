@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawPaw World — Cyberpunk Cat Exploration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game"></canvas>
+  <canvas id="minimap" width="220" height="120"></canvas>
+
+  <!-- HUD -->
+  <div id="hud-top-left" class="holo-panel">
+    <div class="hud-row"><span class="hud-label">ZONE</span><span id="hud-zone">NEON MARKET</span></div>
+    <div class="hud-row"><span class="hud-label">TIME</span><span id="hud-time">22:00</span><span id="hud-weather">CLEAR</span></div>
+    <div class="hud-row"><span class="hud-label">DISCOVERY</span>
+      <div class="bar"><div id="hud-disc-bar"></div></div><span id="hud-disc">0%</span>
+    </div>
+    <div class="hud-row"><span class="hud-label">LV <span id="hud-lv">1</span></span>
+      <div class="bar"><div id="hud-xp-bar"></div></div><span id="hud-paw-title">STREET KITTEN</span>
+    </div>
+  </div>
+
+  <!-- rotating challenges -->
+  <div id="challenges" class="holo-panel">
+    <div id="ch-head">CHALLENGES <span id="ch-tier"></span></div>
+    <div id="ch-list"></div>
+  </div>
+
+  <!-- city bonus event banner -->
+  <div id="bonus-banner" class="hidden"><span id="bonus-name"></span><span id="bonus-t"></span></div>
+
+  <div id="hud-collect" class="holo-panel">
+    <div class="c-row"><span class="c-ico cred">¢</span><span id="c-cred">0</span></div>
+    <div class="c-row"><span class="c-ico food">▣</span><span id="c-food">0</span></div>
+    <div class="c-row"><span class="c-ico chip">◧</span><span id="c-chip">0</span></div>
+    <div class="c-row"><span class="c-ico mem">◈</span><span id="c-mem">0</span></div>
+    <div class="c-row"><span class="c-ico art">✦</span><span id="c-art">0</span></div>
+    <div class="c-row"><span class="c-ico leg">★</span><span id="c-leg">0</span></div>
+  </div>
+
+  <div id="hud-objective" class="holo-panel hidden">
+    <div id="obj-title">OBJECTIVE</div>
+    <div id="obj-text"></div>
+    <div id="obj-timer" class="hidden"></div>
+  </div>
+
+  <div id="hud-abilities" class="holo-panel">
+    <span id="ab-dash" class="ab locked" title="Teleport Dash [X]">⌁</span>
+    <span id="ab-djump" class="ab locked" title="Double Jump">⇈</span>
+    <span id="ab-wall" class="ab locked" title="Wall Run">∥</span>
+    <span id="ab-glide" class="ab locked hidden" title="Glide (hold JUMP)">⌒</span>
+  </div>
+  <div id="buff" class="holo-panel hidden">⚡ <span id="buff-t"></span></div>
+
+  <!-- flow combo meter -->
+  <div id="combo" class="hidden">
+    <div id="combo-line"><span id="combo-x">x1</span><span id="combo-label">FLOW</span><span id="combo-pts">0</span></div>
+    <div id="combo-bar-wrap"><div id="combo-bar"></div></div>
+  </div>
+
+  <!-- Guide companion -->
+  <div id="guide" class="hidden">
+    <div id="guide-orb"></div>
+    <div id="guide-text"></div>
+  </div>
+
+  <!-- Notifications -->
+  <div id="notify-stack"></div>
+  <div id="discovery-banner" class="hidden"><div id="disc-sub">LOCATION DISCOVERED</div><div id="disc-name"></div></div>
+
+  <!-- Interact prompt -->
+  <div id="interact-prompt" class="hidden"><span class="key">E</span><span id="interact-text"></span></div>
+
+  <!-- Dialog / lore reader -->
+  <div id="dialog" class="modal hidden">
+    <div class="modal-box holo-panel">
+      <div id="dialog-title"></div>
+      <div id="dialog-body"></div>
+      <div class="modal-hint">[E] or click to close</div>
+    </div>
+  </div>
+
+  <!-- Hacking minigame -->
+  <div id="hack" class="modal hidden">
+    <div class="modal-box holo-panel">
+      <div id="hack-title">SIGNAL TRACE // BREACH PROTOCOL</div>
+      <div id="hack-status">Memorize the signal sequence…</div>
+      <div id="hack-grid"></div>
+      <div class="modal-hint">[ESC] abort</div>
+    </div>
+  </div>
+
+  <!-- Journal -->
+  <div id="journal" class="modal hidden">
+    <div class="modal-box holo-panel journal-box">
+      <div id="journal-tabs">
+        <span class="jtab active" data-tab="quests">QUESTS</span>
+        <span class="jtab" data-tab="completion">COMPLETION</span>
+        <span class="jtab" data-tab="ach">ACHIEVEMENTS</span>
+        <span class="jtab" data-tab="collection">COLLECTION</span>
+        <span class="jtab" data-tab="skills">SKILL TREE</span>
+        <span class="jtab" data-tab="cosmetics">COSMETICS</span>
+        <span class="jtab" data-tab="shrine">SHRINE</span>
+        <span class="jtab" data-tab="races">RACE RECORDS</span>
+        <span class="jtab" data-tab="photos">PHOTO CHALLENGES</span>
+        <span class="jtab" data-tab="stats">STATS</span>
+      </div>
+      <div id="journal-body"></div>
+      <div class="modal-hint">[J] or [ESC] close</div>
+    </div>
+  </div>
+
+  <!-- Shop -->
+  <div id="shop" class="modal hidden">
+    <div class="modal-box holo-panel">
+      <div id="shop-title">STREET VENDOR <span id="shop-cred"></span></div>
+      <div id="shop-list"></div>
+      <div class="modal-hint">[ESC] close</div>
+    </div>
+  </div>
+
+  <!-- Teleport map -->
+  <div id="teleport" class="modal hidden">
+    <div class="modal-box holo-panel">
+      <div id="tp-title">TRANSIT NODE // FAST TRAVEL</div>
+      <div id="tp-list"></div>
+      <div class="modal-hint">[ESC] close</div>
+    </div>
+  </div>
+
+  <!-- Photo mode -->
+  <div id="photo-overlay" class="hidden">
+    <div class="photo-frame"></div>
+    <div class="photo-corner tl"></div><div class="photo-corner tr"></div>
+    <div class="photo-corner bl"></div><div class="photo-corner br"></div>
+    <div id="photo-hint">PHOTO MODE — [ENTER] capture · [P] exit</div>
+    <div id="photo-target" class="hidden"></div>
+  </div>
+  <div id="photo-flash"></div>
+
+  <!-- Title screen -->
+  <div id="title-screen">
+    <div id="title-cat"></div>
+    <h1>PAWPAW <span>WORLD</span></h1>
+    <p class="tagline">A cyber-cat's neon city. No missions. No combat. Just you, the rooftops, and the rain.</p>
+    <div id="title-controls">
+      <div><span class="key">← →</span> move</div>
+      <div><span class="key">↑</span> jump</div>
+      <div><span class="key">SPACE</span> sprint</div>
+      <div><span class="key">E</span> interact</div>
+      <div><span class="key">S</span> slide / drop</div>
+      <div><span class="key">X</span> dash</div>
+      <div><span class="key">M</span> map</div>
+      <div><span class="key">J</span> journal</div>
+      <div><span class="key">P</span> photo mode</div>
+    </div>
+    <button id="btn-start">ENTER THE CITY</button>
+    <p class="save-note" id="save-note"></p>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/world.js"></script>
+<script src="js/player.js"></script>
+<script src="js/citizens.js"></script>
+<script src="js/systems.js"></script>
+<script src="js/activities.js"></script>
+<script src="js/progression.js"></script>
+<script src="js/meta.js"></script>
+<script src="js/render.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

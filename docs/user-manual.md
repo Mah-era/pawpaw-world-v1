@@ -7,7 +7,7 @@ PAWPAW WORLD is a 3D cyber-cat exploration game. You play PawPaw, a calico cat w
 Run a local server and open the page (ES modules will not load from a `file://` path):
 
 ```bash
-python3 serve.py 8741
+python3 tools/serve.py 8741
 ```
 
 Then visit `http://localhost:8741`.

@@ -7,10 +7,10 @@ import * as game from "./game.js";
 import * as ui from "./ui.js";
 import { initAudio, sfx } from "./audio.js";
 import { initFx, updateFx, updateFlash, updateFloaters } from "./fx.js";
-import { EffectComposer } from "../lib/jsm/postprocessing/EffectComposer.js";
-import { RenderPass } from "../lib/jsm/postprocessing/RenderPass.js";
-import { UnrealBloomPass } from "../lib/jsm/postprocessing/UnrealBloomPass.js";
-import { OutputPass } from "../lib/jsm/postprocessing/OutputPass.js";
+import { EffectComposer } from "../vendor/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "../vendor/jsm/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "../vendor/jsm/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "../vendor/jsm/postprocessing/OutputPass.js";
 
 // ---------- renderer / scene / camera ----------
 const canvas = document.getElementById("game");

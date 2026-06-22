@@ -1,8 +1,8 @@
 .DS_Store
 __pycache__/
 *.pyc
-.claude/settings.local.json
+.claude/
 
 # Local source recording is 1.7 GB and exceeds GitHub's file limit.
 # The optimized report media and all source code remain tracked.
-report_assets/videos/gameplay-complete.mov
+local-media/

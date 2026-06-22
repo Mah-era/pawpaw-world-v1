@@ -2,17 +2,17 @@
 
 PAWPAW WORLD is a browser game about PawPaw, a cyber-cat exploring a dense neon city — now rebuilt as a full 3D game with a third-person mouse-look camera.
 
-The game is built with vanilla JavaScript, Three.js (vendored locally in `lib/`, no internet required at runtime), WebAudio, and localStorage. There are no build steps, no paid systems, and no gambling or real-money loot mechanics.
+The game is built with vanilla JavaScript, Three.js (vendored locally in `vendor/`, no internet required at runtime), WebAudio, and localStorage. There are no build steps, no paid systems, and no gambling or real-money loot mechanics.
 
-The original 2D Canvas version is preserved untouched in [`legacy-2d/`](legacy-2d/) and still runs by opening `legacy-2d/index.html`.
+The original 2D Canvas version is preserved untouched in [`archive/legacy-2d/`](archive/legacy-2d/) and still runs at `archive/legacy-2d/index.html`.
 
 ## Run
 
 ```bash
-python3 serve.py 8741
+python3 tools/serve.py 8741
 ```
 
-(`serve.py` is a plain `http.server` with caching disabled so code changes show up on reload; `python3 -m http.server 8741` works too.)
+(`tools/serve.py` is a plain `http.server` with caching disabled so code changes show up on reload; `python3 -m http.server 8741` works too.)
 
 Open:
 
@@ -68,27 +68,20 @@ Progress saves automatically to localStorage every few seconds and on exit: coll
 ## Project Structure
 
 ```text
-index.html           Title screen, HUD, and modal markup
-style.css            Neon UI styling, animated title, map, trackers
-serve.py             Static dev server with caching disabled
-lib/three.module.js  Vendored Three.js (r160)
-lib/jsm/             Vendored post-processing (EffectComposer, UnrealBloom, OutputPass)
-src/data.js          Config, districts, lore, shop, kittens, missions, side-quests, discoveries, shared state
-src/world.js         Procedural city, PBR facades, shrine, NPCs, drones, ziplines, rain, day/night
-src/player.js        PawPaw mesh, movement physics, zipline riding, mouse-look + zoom camera
-src/game.js          Collectibles, missions, side-quests, discoveries, courier jobs, flow combo, XP, save/load
-src/ui.js            HUD, trackers, compass, popups, city map, journal/shop/dialogue modals
-src/fx.js            Particle bursts, ambient emitters, reward floaters, screen flashes
-src/audio.js         WebAudio music bed, reactive ambience layers, sound effects
-legacy-2d/           The original 2D Canvas version, unchanged
-docs/                Player manual and detailed project report
-report_assets/images/  Real in-game screenshots used by the generated report
-report_assets/videos/  Opening, gameplay, and PawPaw character-study recordings
-build_report.js      Generates PAWPAW_WORLD_Report.html
-PAWPAW_WORLD_Report.html  Project report (videos remain external for fast playback)
+index.html              Deployed game entry point and UI markup
+style.css               Neon interface styling
+src/                    Game source modules
+vendor/                 Vendored Three.js and post-processing modules
+assets/report/images/   In-game report screenshots
+assets/report/videos/   Deployment-ready report videos
+docs/                    Manuals and the generated HTML project report
+archive/legacy-2d/      Preserved original 2D Canvas version
+tools/serve.py          Local static development server
+tools/build_report.js   Regenerates docs/PAWPAW_WORLD_Report.html
+.github/workflows/      GitHub Pages deployment automation
 ```
 
-The original 2D Canvas version is preserved in `legacy-2d/` and still runs by opening `legacy-2d/index.html`.
+The original 2D Canvas version is preserved in `archive/legacy-2d/`.
 
 ## Verification
 
