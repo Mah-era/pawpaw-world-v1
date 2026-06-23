@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — INPUT & GAME LOOP ============
+// ============ PawPaw-World-3D-v1 — LEGACY INPUT & GAME LOOP ============
 "use strict";
 
 (function () {

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dev server for PAWPAW WORLD — http.server with caching disabled.
+"""Dev server for PawPaw-World-3D-v1 — http.server with caching disabled.
 
 Also exposes POST /save?name=<file> which writes the raw request body into
 assets/report/images/<file> — used by the in-browser screenshot capture to persist

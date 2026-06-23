@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — HUD & MODALS ============
+// ============ PawPaw-World-3D-v1 — HUD & MODALS ============
 import { TOTALS, ACH, CHIP_LORE, MEMORY_LORE, MISSIONS, SIDE_QUESTS, CITY_NPCS, DISCOVERIES, COLLECTION_SETS, state } from "./data.js";
 import { setProgress } from "./game.js";
 

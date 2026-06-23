@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — PROGRESSION (FLOW / ECONOMY / QUESTS / TOYS) ============
+// ============ PawPaw-World-3D-v1 — LEGACY PROGRESSION (FLOW / ECONOMY / QUESTS / TOYS) ============
 "use strict";
 
 // ================= CREDITS =================

@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — BOOT, INPUT & LOOP ============
+// ============ PawPaw-World-3D-v1 — BOOT, INPUT & LOOP ============
 import * as THREE from "three";
 import { CFG, GUIDE, state, keys } from "./data.js";
 import { buildWorld, updateWorld, setRendererCaps } from "./world.js";

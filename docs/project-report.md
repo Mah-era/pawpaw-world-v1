@@ -1,8 +1,12 @@
-# PAWPAW WORLD 3D — Detailed Project Report
+# PawPaw-World-3D-v1 — Detailed Project Report
+
+**Live deployment:** https://mah-era.github.io/PawPaw-World-3D-v1/  
+**Project report:** https://mah-era.github.io/PawPaw-World-3D-v1/docs/PAWPAW_WORLD_Report.html  
+**Public repository:** https://github.com/Mah-era/PawPaw-World-3D-v1
 
 ## Executive Summary
 
-PAWPAW WORLD 3D is a finished browser game in which the player controls PawPaw, a cyber-cat with one glowing cybernetic eye, exploring a dense neon city in full 3D from a third-person, mouse-look perspective. It began as a 2D Canvas game and was rebuilt as a real-time 3D experience using Three.js, then deepened into an activity-rich, mission-driven open city.
+PawPaw-World-3D-v1 is a finished browser game in which the player controls PawPaw, a cyber-cat with one glowing cybernetic eye, exploring a dense neon city in full 3D from a third-person, mouse-look perspective. It began as a 2D Canvas game and was rebuilt as a real-time 3D experience using Three.js, then deepened into an activity-rich, mission-driven open city.
 
 The finished project combines relaxed third-person traversal and parkour, a guided main-mission chain, interconnected NPC side-quests, timed courier deliveries, rotating city tasks, a FLOW action combo, hidden discoveries, collectibles, lore, kitten rescues, Paw Shrine rebuilding, a vendor economy, XP and levels, achievements, an information-rich city map, and local saves.
 
@@ -224,4 +228,4 @@ The project was syntax-checked with Node and smoke-tested in a browser through a
 
 ## Final Result
 
-PAWPAW WORLD 3D is a complete, polished, non-combat cyberpunk cat exploration game: a cinematic, reflective neon city that is dense with interconnected things to do — a guided main story, character side-quests, courier work, rotating tasks, hidden discoveries, collectibles, climbing, kitten rescues, and an economy — all wrapped in bloom-lit visuals, a reactive soundscape, and a clear guidance and map system, running entirely in the browser with no build step and no dependencies beyond a vendored Three.js.
+PawPaw-World-3D-v1 is a complete, polished, non-combat cyberpunk cat exploration game: a cinematic, reflective neon city that is dense with interconnected things to do — a guided main story, character side-quests, courier work, rotating tasks, hidden discoveries, collectibles, climbing, kitten rescues, and an economy — all wrapped in bloom-lit visuals, a reactive soundscape, and a clear guidance and map system, running entirely in the browser with no build step and no dependencies beyond a vendored Three.js.

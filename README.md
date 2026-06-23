@@ -1,9 +1,10 @@
-# PAWPAW WORLD 3D - v1
+# PawPaw-World-3D-v1
 
-PAWPAW WORLD is a browser game about PawPaw, a cyber-cat exploring a dense neon city — now rebuilt as a full 3D game with a third-person mouse-look camera.
+PawPaw-World-3D-v1 is a browser game about PawPaw, a cyber-cat exploring a dense neon city — now rebuilt as a full 3D game with a third-person mouse-look camera.
 
-**Live game:** https://mah-era.github.io/pawpaw-world-v1/  
-**Project report:** https://mah-era.github.io/pawpaw-world-v1/docs/PAWPAW_WORLD_Report.html
+**Live game:** https://mah-era.github.io/PawPaw-World-3D-v1/  
+**Project report:** https://mah-era.github.io/PawPaw-World-3D-v1/docs/PAWPAW_WORLD_Report.html  
+**Public repo:** https://github.com/Mah-era/PawPaw-World-3D-v1
 
 The game is built with vanilla JavaScript, Three.js (vendored locally in `vendor/`, no internet required at runtime), WebAudio, and localStorage. There are no build steps, no paid systems, and no gambling or real-money loot mechanics.
 
@@ -76,7 +77,7 @@ style.css               Neon interface styling
 src/                    Game source modules
 vendor/                 Vendored Three.js and post-processing modules
 assets/report/images/   In-game report screenshots
-assets/report/videos/   Deployment-ready report videos
+assets/report/videos/   Deployment-ready report videos, including the gameplay clip
 docs/                    Manuals and the generated HTML project report
 archive/legacy-2d/      Preserved original 2D Canvas version
 tools/serve.py          Local static development server

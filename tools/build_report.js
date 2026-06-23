@@ -4,6 +4,10 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const IMG_DIR = path.join(ROOT, "assets", "report", "images");
+const PROJECT_NAME = "PawPaw-World-3D-v1";
+const DEPLOY_URL = "https://mah-era.github.io/PawPaw-World-3D-v1/";
+const REPORT_URL = "https://mah-era.github.io/PawPaw-World-3D-v1/docs/PAWPAW_WORLD_Report.html";
+const REPO_URL = "https://github.com/Mah-era/PawPaw-World-3D-v1";
 const cache = {};
 function img(name) {
   if (cache[name]) return cache[name];
@@ -19,7 +23,7 @@ function fig(name, title, caption) {
 function videoSrc(name) {
   const files = {
     opening: "vid_opening.webm",
-    gameplay: "vid_gameplay-legacy.webm",
+    gameplay: "vid_gameplay.webm",
     pawpaw: "vid_pawpaw.webm",
   };
   if (!files[name]) throw new Error("Unknown video: " + name);
@@ -65,7 +69,7 @@ const html = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAWPAW WORLD 3D — Project Report</title>
+<title>${PROJECT_NAME} — Project Report</title>
 <style>
   :root{
     --bg:#0a0712; --bg2:#100a1d; --panel:rgba(22,14,38,.72); --border:rgba(255,255,255,.09);
@@ -243,7 +247,7 @@ const html = `<!DOCTYPE html>
 <body>
 <div class="bgfx"></div><div class="scan"></div>
 <nav><div class="wrap">
-  <b>◣ PAWPAW WORLD 3D</b>
+  <b>◣ ${PROJECT_NAME}</b>
   <a href="#overview">OVERVIEW</a>
   <a href="#motion">VIDEO</a>
   <a href="#play">GAMEPLAY</a>
@@ -259,10 +263,11 @@ const html = `<!DOCTYPE html>
 
 <header class="hero"><div class="wrap">
   <div class="kicker">▟ NEON CITY · CYBER-CAT ODYSSEY ▙</div>
-  <h1>PAWPAW WORLD</h1>
+  <h1>${PROJECT_NAME}</h1>
   <div class="sub">a fully 3D, non-combat cyberpunk cat exploration game — built in the browser</div>
+  <p class="sub"><a href="${DEPLOY_URL}">Live deployment</a> · <a href="${REPORT_URL}">Project report</a> · <a href="${REPO_URL}">Public repository</a></p>
   <div class="hero-media">
-    <video data-clip="opening" src="${videoSrc("opening")}" poster="${img("angle_title")}" autoplay loop muted playsinline controls preload="metadata" aria-label="Actual PAWPAW WORLD title-screen opening orbit"></video>
+    <video data-clip="opening" src="${videoSrc("opening")}" poster="${img("angle_title")}" autoplay loop muted playsinline controls preload="metadata" aria-label="Actual PawPaw-World-3D-v1 title-screen opening orbit"></video>
     <div class="frame"></div>
     <div class="hero-cap"><b>ACTUAL OPENING SCENE</b><span>Live title-screen camera orbit over Transit Plaza, the Paw Shrine, and the procedural skyline.</span></div>
   </div>
@@ -307,7 +312,7 @@ const html = `<!DOCTYPE html>
     street population, wet lighting, and traversal. The opening orbit is placed directly below the
     game name; PawPaw's complete turn-and-expression study has its own dedicated section.</p>
   <div class="vid-hero" style="margin-bottom:18px">
-    ${clip("gameplay","Complete Gameplay Recording — Keyboard + Mouse","The supplied 4:17 live recording covers navigation and the game's full play session. Use the timeline to inspect missions, rescue, NPC interaction, weather, traversal, map, journal, and progression systems.")}
+    ${clip("gameplay","Complete Gameplay Recording — Keyboard + Mouse","The report gameplay video is deployed at assets/report/videos/vid_gameplay.webm. Use the timeline to inspect missions, rescue, NPC interaction, weather, traversal, map, journal, and progression systems.")}
   </div>
   <div class="progress-grid">
     <div class="progress-card"><h3>Mission + Rescue</h3><p>Active mission HUD, compass/beam guidance, lost-kitten pickup, carrying, shrine return, reward, and shrine progression.</p></div>
@@ -618,7 +623,7 @@ const html = `<!DOCTYPE html>
 </div></section>
 
 <footer><div class="wrap">
-  <div class="glow">PAWPAW WORLD 3D</div>
+  <div class="glow">${PROJECT_NAME}</div>
   <div>Built with Three.js · vanilla JavaScript · WebAudio · localStorage — no build step, no dependencies beyond a vendored renderer.</div>
   <div style="margin-top:8px;opacity:.6">Report generated from ${GALLERY.length} real in-game captures.</div>
 </div></footer>

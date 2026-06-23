@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — LIVING CITY (NPCS, VEHICLES, DRONES) ============
+// ============ PawPaw-World-3D-v1 — LEGACY LIVING CITY (NPCS, VEHICLES, DRONES) ============
 "use strict";
 
 G.npcs = []; G.vehicles = []; G.drones = [];

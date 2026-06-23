@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — CITY GENERATION ============
+// ============ PawPaw-World-3D-v1 — LEGACY CITY GENERATION ============
 "use strict";
 
 G.world = {

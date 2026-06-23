@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — PARTICLES & SCREEN FEEDBACK ============
+// ============ PawPaw-World-3D-v1 — PARTICLES & SCREEN FEEDBACK ============
 import * as THREE from "three";
 
 const N = 1000;

@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — CONFIG & SHARED STATE ============
+// ============ PawPaw-World-3D-v1 — LEGACY CONFIG & SHARED STATE ============
 "use strict";
 
 const G = {}; // global game namespace

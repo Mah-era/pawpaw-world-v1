@@ -1,6 +1,9 @@
-# PAWPAW WORLD 3D — User Manual
+# PawPaw-World-3D-v1 — User Manual
 
-PAWPAW WORLD is a 3D cyber-cat exploration game. You play PawPaw, a calico cat with one glowing cybernetic eye, roaming a dense neon city. There is no combat and no hard failure — almost everything you do gives credits, XP, collectibles, lore, or progress.
+PawPaw-World-3D-v1 is a 3D cyber-cat exploration game. You play PawPaw, a calico cat with one glowing cybernetic eye, roaming a dense neon city. There is no combat and no hard failure — almost everything you do gives credits, XP, collectibles, lore, or progress.
+
+**Live deployment:** https://mah-era.github.io/PawPaw-World-3D-v1/  
+**Project report:** https://mah-era.github.io/PawPaw-World-3D-v1/docs/PAWPAW_WORLD_Report.html
 
 ## Starting the Game
 

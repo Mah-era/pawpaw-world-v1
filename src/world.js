@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — DENSE CAT-SCALE CITY ============
+// ============ PawPaw-World-3D-v1 — DENSE CAT-SCALE CITY ============
 import * as THREE from "three";
 import { CFG, zoneAt, makeRng, POSTERS, SIDE_QUESTS, CITY_NPCS, DISCOVERIES } from "./data.js";
 import { addEmitter } from "./fx.js";

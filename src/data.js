@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — SHARED DATA & STATE ============
+// ============ PawPaw-World-3D-v1 — SHARED DATA & STATE ============
 
 export const CFG = {
   CITY: 200,            // city half-size in meters (world spans -CITY..CITY)

@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — PAWPAW, PHYSICS & MOUSE-LOOK CAMERA ============
+// ============ PawPaw-World-3D-v1 — PAWPAW, PHYSICS & MOUSE-LOOK CAMERA ============
 import * as THREE from "three";
 import { CFG, state, keys } from "./data.js";
 import { sfx } from "./audio.js";

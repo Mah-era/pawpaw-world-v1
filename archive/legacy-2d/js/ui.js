@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — UI / HUD / MINIGAMES ============
+// ============ PawPaw-World-3D-v1 — LEGACY UI / HUD / MINIGAMES ============
 "use strict";
 
 G.ui = {

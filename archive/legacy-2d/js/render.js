@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — RENDERER ============
+// ============ PawPaw-World-3D-v1 — LEGACY RENDERER ============
 "use strict";
 
 let cvs, ctx, scale = 1, drops = [], stars = [], far1 = [], far2 = [], puddles = [];

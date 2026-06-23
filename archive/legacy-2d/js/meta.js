@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — META HOOKS (XP / CHALLENGES / FEVER / BONUS EVENTS) ============
+// ============ PawPaw-World-3D-v1 — LEGACY META HOOKS (XP / CHALLENGES / FEVER / BONUS EVENTS) ============
 "use strict";
 
 // ================= PAW LEVEL (XP) =================

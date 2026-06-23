@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — TIME / WEATHER / EVENTS / AUDIO ============
+// ============ PawPaw-World-3D-v1 — LEGACY TIME / WEATHER / EVENTS / AUDIO ============
 "use strict";
 
 G.time = { t: 0.88, hours: 21, light: 0 }; // start in the evening

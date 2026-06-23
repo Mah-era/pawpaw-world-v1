@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — ACTIVITIES, COLLECTIBLES, PROGRESSION ============
+// ============ PawPaw-World-3D-v1 — LEGACY ACTIVITIES, COLLECTIBLES, PROGRESSION ============
 "use strict";
 
 G.items = []; G.terminals = []; G.deliveries = []; G.photoTargets = [];

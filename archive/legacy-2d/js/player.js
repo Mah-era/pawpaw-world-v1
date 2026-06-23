@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD — PLAYER (PAWPAW THE CYBER-CAT) ============
+// ============ PawPaw-World-3D-v1 — LEGACY PLAYER (PAWPAW THE CYBER-CAT) ============
 "use strict";
 
 G.initPlayer = function (x, y) {

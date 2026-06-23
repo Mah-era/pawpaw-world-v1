@@ -1,4 +1,4 @@
-// ============ PAWPAW WORLD 3D — COLLECTIBLES, PROGRESSION, SAVE ============
+// ============ PawPaw-World-3D-v1 — COLLECTIBLES, PROGRESSION, SAVE ============
 import * as THREE from "three";
 import { CFG, TOTALS, UNLOCKS, SHOP, ACH, CHIP_LORE, MEMORY_LORE, KITTEN_DEFS, CACHES, POSTERS, OBJ_TYPES, COURIER_DESTS, MISSIONS, SIDE_QUESTS, CITY_NPCS, DISCOVERIES, COLLECTION_SETS, GUIDE, state, makeRng, zoneAt } from "./data.js";
 import { sfx, setAmbience, setMusicIntensity, setFever } from "./audio.js";
