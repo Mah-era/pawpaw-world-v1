@@ -77,7 +77,8 @@ style.css               Neon interface styling
 src/                    Game source modules
 vendor/                 Vendored Three.js and post-processing modules
 assets/report/images/   In-game report screenshots
-assets/report/videos/   Deployment-ready report videos, including gameplay-complete.webm
+assets/report/videos/   Deployment-ready report videos
+local-media/             Source captures, including gameplay-complete.mov (used in the report)
 docs/                    Manuals and the generated HTML project report
 archive/legacy-2d/      Preserved original 2D Canvas version
 tools/serve.py          Local static development server
