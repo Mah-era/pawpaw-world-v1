@@ -23,7 +23,7 @@ function fig(name, title, caption) {
 function videoSrc(name) {
   const files = {
     opening: "vid_opening.webm",
-    gameplay: "gameplay-complete.webm",
+    gameplay: "Gameplay-Complete-v2.mp4",
     pawpaw: "vid_pawpaw.webm",
   };
   if (!files[name]) throw new Error("Unknown video: " + name);
@@ -311,7 +311,9 @@ const html = `<!DOCTYPE html>
     third-person keyboard movement and mouse-look navigation with the live HUD, mission compass,
     street population, wet lighting, and traversal. The opening orbit is placed directly below the
     game name; PawPaw's complete turn-and-expression study has its own dedicated section.</p>
-  <!-- Gameplay reel served from local-media/gameplay-complete.mov locally only; omitted from the deployed report because the 1.6 GB source is gitignored and cannot be hosted on GitHub Pages. -->
+  <div class="vid-hero" style="margin-bottom:18px">
+    ${clip("gameplay","gameplay-complete — Keyboard + Mouse","Gameplay reel served from assets/report/videos/Gameplay-Complete-v2.mp4. Use the timeline to inspect missions, rescue, NPC interaction, weather, traversal, map, journal, and progression systems.")}
+  </div>
   <div class="progress-grid">
     <div class="progress-card"><h3>Mission + Rescue</h3><p>Active mission HUD, compass/beam guidance, lost-kitten pickup, carrying, shrine return, reward, and shrine progression.</p></div>
     <div class="progress-card"><h3>NPC Interaction</h3><p>Quest markers, E-key conversation, dialogue modal, multi-step errand tracking, named neighbors, and citizen scritches.</p></div>
