@@ -54,6 +54,7 @@ archive/legacy-2d/   The original 2D Canvas version, unchanged
 README.md            Overview, controls, run instructions
 docs/user-manual.md   Player-facing manual
 docs/project-report.md   This document
+assets/report/videos/gameplay-complete.webm   Deployment-ready gameplay video from local-media/gameplay-complete.mov
 ```
 
 ### Module Responsibilities

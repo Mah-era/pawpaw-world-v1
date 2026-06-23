@@ -23,7 +23,7 @@ function fig(name, title, caption) {
 function videoSrc(name) {
   const files = {
     opening: "vid_opening.webm",
-    gameplay: "vid_gameplay.webm",
+    gameplay: "gameplay-complete.webm",
     pawpaw: "vid_pawpaw.webm",
   };
   if (!files[name]) throw new Error("Unknown video: " + name);
@@ -312,7 +312,7 @@ const html = `<!DOCTYPE html>
     street population, wet lighting, and traversal. The opening orbit is placed directly below the
     game name; PawPaw's complete turn-and-expression study has its own dedicated section.</p>
   <div class="vid-hero" style="margin-bottom:18px">
-    ${clip("gameplay","Complete Gameplay Recording — Keyboard + Mouse","The report gameplay video is deployed at assets/report/videos/vid_gameplay.webm. Use the timeline to inspect missions, rescue, NPC interaction, weather, traversal, map, journal, and progression systems.")}
+    ${clip("gameplay","gameplay-complete — Keyboard + Mouse","Gameplay video added from local-media/gameplay-complete.mov as the deployment-ready assets/report/videos/gameplay-complete.webm. Use the timeline to inspect missions, rescue, NPC interaction, weather, traversal, map, journal, and progression systems.")}
   </div>
   <div class="progress-grid">
     <div class="progress-card"><h3>Mission + Rescue</h3><p>Active mission HUD, compass/beam guidance, lost-kitten pickup, carrying, shrine return, reward, and shrine progression.</p></div>
