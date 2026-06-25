@@ -426,6 +426,11 @@ const html = `<!DOCTYPE html>
       <p style="color:var(--muted);font-size:13px">Four gated, multi-step character chains use offer → active steps → return → complete states. A cyan beam and side tracker point to the current step, while completion unlocks the next character.</p>
       <p style="color:var(--muted);font-size:13px">Eight named neighbors add shorter conversations and first-meeting rewards, making each district feel inhabited outside the formal quest chain.</p></div>
   </div>
+  <div class="subhead">MEETING THE CITY'S CHARACTERS</div>
+  <div class="two">
+    ${fig("npc_patch","Quest-giver: Patch","PawPaw walks up to Patch, one of the four gated quest NPCs whose multi-step chains thread through the districts.")}
+    ${fig("npc_bolt","Named neighbor: Bolt","Eight named neighbors like Bolt offer shorter conversations and first-meeting rewards beside the courier boards.")}
+  </div>
 </div></section>
 
 <section id="pawpaw"><div class="wrap">
